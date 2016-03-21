@@ -1,20 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement : MonoBehaviour {
+public class Playermovement : MonoBehaviour {
+    public float speed;
+    private Vector3 movement;
+    private Vector3 check;
 
-    public float moveSpeed;
-	public float maxSpeed = 5;
-    private Vector3 location;
-	private float maxX = 250;
-
-    // Use this for initialization
+	// Use this for initialization
 	void Start () {
+	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		location = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
-		transform.Translate (location * moveSpeed);
+	void FixedUpdate () {
+        movement = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        check = movement * speed;
+        transform.Translate(check);
+
 	}
 }
