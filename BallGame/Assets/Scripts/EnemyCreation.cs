@@ -27,7 +27,7 @@ public class EnemyCreation : MonoBehaviour {
 		x = Random.Range(-45f, 45f);
         y =3f;
 		z = Random.Range(-45f, 45f);
-        value = new Vector3(x,y,z);
+        value = new Vector3(x,0f,z);
         return value;
 	}
     
