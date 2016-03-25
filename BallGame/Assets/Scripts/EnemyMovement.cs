@@ -2,10 +2,9 @@
 using System.Collections;
 
 public class EnemyMovement : MonoBehaviour {
-	[SerializeField]
-	private float speedX;
-	[SerializeField]
-	private float speedZ;
+	public float speedX;
+
+	public float speedZ;
 
 	private Vector3 placement;
 
