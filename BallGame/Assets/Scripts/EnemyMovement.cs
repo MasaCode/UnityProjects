@@ -41,8 +41,17 @@ public class EnemyMovement : MonoBehaviour {
 		transform.position = placement;
 	}
 
+    //test
+    void coinDestroyed()
+    {
+        coinStatus = true;
+    }
+
 	private void RandomSpeed(){
-		speedX = Random.Range (0.1f, 0.5f);
-		speedZ = Random.Range (0.1f, 0.5f);
+        
+		speedX = Random.Range (0.1f, 0.4f);
+	    speedZ = Random.Range (0.1f, 0.4f);
 	}
+
+    
 }

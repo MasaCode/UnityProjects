@@ -10,6 +10,9 @@ public class UpdateUI : MonoBehaviour {
     [SerializeField]
     private Text HealthLabel;
 
+    [SerializeField]
+    private Text CoinLabel;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +21,8 @@ public class UpdateUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    TimerLabel.text = FormatToTimer(GameManager.Instance.Timer);
-        HealthLabel.text = "Life : " + GameManager.Instance.Health.ToString();
+        HealthLabel.text = "Life : " + GameManager.Instance.Health.ToString() + "%";
+        CoinLabel.text = "Coin : " + GameManager.Instance.CoinCount.ToString();
 	}
 
     private string FormatToTimer(float time)

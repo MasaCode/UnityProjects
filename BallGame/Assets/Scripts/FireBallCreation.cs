@@ -13,23 +13,23 @@ public class FireBallCreation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        fireCount = 0;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Vector3 place;
-        if (fireCount >= 100)
+        if (GameManager.Instance.FireBallCount >= 300)
         {
             place = enemy.transform.position;
             place.y = 1.5f;
             Instantiate(fireball, place, transform.rotation);
-            fireCount = 0;
+            GameManager.Instance.FireBallCount = 0;
             //print("Fire");
         }
         else
         {
-            fireCount++;
+            GameManager.Instance.FireBallCount++;
         }
 	}
 }

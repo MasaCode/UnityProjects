@@ -12,4 +12,13 @@ public class EnemyDestroy : MonoBehaviour {
             DestroyObject(enemy);
         }
     }
+ 
+    void Update()
+    {
+        if (GameManager.Instance.Health <= 0)
+        {
+            DestroyObject(enemy);
+        }
+    }
+
 }

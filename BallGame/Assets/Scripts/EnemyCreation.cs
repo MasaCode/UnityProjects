@@ -7,16 +7,15 @@ public class EnemyCreation : MonoBehaviour {
     private int enemyCount;
 	// Use this for initialization
 	void Start () {
-       enemyCount = 0;    
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 		Vector3 placement;
-           if(enemyCount <= 10){
+           if(GameManager.Instance.EnemyCount <= GameManager.Instance.EnemyMax){
                placement = RandomPlacement();
                Instantiate(enemy,placement,transform.rotation);
-               enemyCount++;
+               GameManager.Instance.EnemyCount += 1;
            }
 	}
    

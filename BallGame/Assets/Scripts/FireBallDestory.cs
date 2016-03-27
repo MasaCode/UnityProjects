@@ -38,6 +38,13 @@ public class FireBallDestory : MonoBehaviour {
                 Destroy(gameObject);
                 isDestoryed = true;
             }
+
+            if (GameManager.Instance.Health <= 0)
+            {
+                Destroy(gameObject);
+                isDestoryed = true;
+            }
+
         }
 
 	}
