@@ -17,6 +17,8 @@ public class GameManager : Singleton<GameManager> {
         set { _health = value; }
     }
 
+	private bool isDied = false;
+
 	// Use this for initialization
 	void Start () {
         Timer = 0f;
@@ -29,7 +31,9 @@ public class GameManager : Singleton<GameManager> {
 
         if (Health <= 0)
         {
-            //Application.LoadLevel("Scene1");
+			Timer = 0f;
+			Health = 100;
+            Application.LoadLevel("Scene1");
         }
 	}
 
